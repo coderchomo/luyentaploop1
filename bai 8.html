@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button>Play</button>
+<script>
+    let limitup=prompt("Up limit");
+    limitup=parseInt(limitup);
+    let limitdown=prompt("Down limit");
+    limitdown=parseInt(limitdown);
+    let randomnumber=Math.floor(Math.random()*(limitup-limitdown))+limitdown;
+    let inputnumber=prompt("Input number from limit");
+    if(randomnumber==inputnumber){
+        alert("Congratulation");
+    }else{
+        while(inputnumber>randomnumber){
+            alert("input number is bigger than random number now.please try again!");
+            inputnumber=prompt("Input another number form limit");
+        }
+        while(inputnumber<randomnumber){
+            alert("input number is smaller than random number now.please try again!");
+            inputnumber=prompt("Input another number from limit");
+        }
+    }
+</script>
+</body>
+</html>
